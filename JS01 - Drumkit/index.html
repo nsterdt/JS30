@@ -9,39 +9,39 @@
     <div class="center">
         <div id="a" class="key">
             <kbd>A</kbd>
-            <p class="sound">CLAP</p>
+            <p class="sound">clap</p>
         </div>
         <div id="s" class="key">
             <kbd>S</kbd>
-            <p class="sound">HIHAT</p>
+            <p class="sound">hihat</p>
         </div>
         <div id="d" class="key">
             <kbd>D</kbd>
-            <p class="sound">KICK</p>
+            <p class="sound">kick</p>
         </div>
         <div id="f" class="key">
             <kbd>F</kbd>
-            <p class="sound">OPENHAT</p>
+            <p class="sound">openhat</p>
             </div>
         <div id="g" class="key">
             <kbd>G</kbd>
-            <p class="sound">BOOM</p>
+            <p class="sound">boom</p>
         </div>
         <div id="h" class="key">
             <kbd>H</kbd>
-            <p class="sound">RIDE</p>
+            <p class="sound">ride</p>
         </div>
         <div id="j" class="key">
             <kbd>J</kbd>
-            <p class="sound">SNARE</p>
+            <p class="sound">snare</p>
         </div>
         <div id="k" class="key">
             <kbd>K</kbd>
-            <p class="sound">TOM</p>
+            <p class="sound">tom</p>
         </div>
         <div id="l" class="key">
             <kbd>L</kbd>
-            <p class="sound">TINK</p>
+            <p class="sound">tink</p>
         </div>
     </div>
 
@@ -60,6 +60,13 @@
         var div = document.getElementById(e.key);
         if (div != null) {
             div.classList.add("highlighted");
+            var p = div.querySelector("p");
+            
+            if (p != null) {
+                var audio = document.getElementById(p.textContent);
+                audio.currentTime = 0;
+                audio.play();
+            }
         }
     });
 </script>
