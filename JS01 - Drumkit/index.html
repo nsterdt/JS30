@@ -69,5 +69,12 @@
             }
         }
     });
+
+    function removeAnimation(e) {
+        e.target.classList.remove("highlighted");
+    }
+
+    const keys = Array.from(document.querySelectorAll(".key"));
+    keys.forEach(key => key.addEventListener("animationend", removeAnimation));
 </script>
 </body>
