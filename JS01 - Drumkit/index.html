@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <div id="a" class="key">
+            <kbd>A</kbd>
+            <p class="sound">CLAP</p>
+        </div>
+        <div id="s" class="key">
+            <kbd>S</kbd>
+            <p class="sound">HIHAT</p>
+        </div>
+        <div id="d" class="key">
+            <kbd>D</kbd>
+            <p class="sound">KICK</p>
+        </div>
+        <div id="f" class="key">
+            <kbd>F</kbd>
+            <p class="sound">OPENHAT</p>
+            </div>
+        <div id="g" class="key">
+            <kbd>G</kbd>
+            <p class="sound">BOOM</p>
+        </div>
+        <div id="h" class="key">
+            <kbd>H</kbd>
+            <p class="sound">RIDE</p>
+        </div>
+        <div id="j" class="key">
+            <kbd>J</kbd>
+            <p class="sound">SNARE</p>
+        </div>
+        <div id="k" class="key">
+            <kbd>K</kbd>
+            <p class="sound">TOM</p>
+        </div>
+        <div id="l" class="key">
+            <kbd>L</kbd>
+            <p class="sound">TINK</p>
+        </div>
+    </div>
+
+<script>
+    window.addEventListener("keydown", function(e) {
+        var div = document.getElementById(e.key);
+        if (div != null) {
+            div.classList.add("highlighted");
+        }
+    });
+</script>
+</body>
