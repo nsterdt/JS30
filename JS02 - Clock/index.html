@@ -24,9 +24,7 @@
             var seconds = date.getSeconds();
             var minutes = date.getMinutes();
             var hours = date.getHours();
-
-            console.log(hours + ":" + minutes + ":" + seconds);
-
+            
             setSecondsHand(seconds);
             setMinutesHand(minutes);
             setHoursHand(hours);
@@ -34,7 +32,7 @@
 
         function setSecondsHand(seconds) {
 
-            var degree = seconds * 6; // 360 degrees divided by 60 seconds in a minute
+            var degree = seconds * (360 / 60); // 360 degrees divided by 60 seconds in a minute
 
             var div = document.querySelector(".second");
             div.style.transform = "rotate(" + (degree + 90) + "deg)";
@@ -42,14 +40,14 @@
 
         function setMinutesHand(minutes) {
 
-            var degree = minutes * 6;
+            var degree = minutes * (360 / 60); // 360 degrees divided by 60 minutes in an hour
             var div = document.querySelector(".minute");
             div.style.transform = "rotate(" + (degree + 90) + "deg)";
         }
 
         function setHoursHand(hours) {
 
-            var degree = hours * 15;
+            var degree = hours * (360 / 24); // 360 degrees divided by 24 hours in a day
             var div = document.querySelector(".hour");
             div.style.transform = "rotate(" + (degree + 90) + "deg)";
         }
